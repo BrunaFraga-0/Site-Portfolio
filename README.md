@@ -85,7 +85,7 @@ Nesta etapa, o foco foi transformar a estrutura bruta em uma interface mais amig
 
 Você pode acompanhar a evolução do site através deste link:
 
-👉 [Link para o meu Portfólio](https://brunafraga-0.github.io/Site-Portifolio/)
+👉 [Link para o meu Portfólio](https://brunafraga-0.github.io/Site-Portfolio/)
 
 ---
 
