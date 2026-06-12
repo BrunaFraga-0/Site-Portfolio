@@ -69,40 +69,6 @@ h1 {
     transition: 0.3s; 
 }
 
-/* Ajustes exclusivos para telas de celular (até 768px) */
-@media screen and (max-width: 768px) {
-    
-    /* 1. CABEÇALHO: Empilha o nome e o menu para não espremer */
-    header {
-        padding: 15px 10px;
-        position: relative; /* tira o fixo no celular se ocupar muita tela */
-    }
-
-    h1 {
-        font-size: 1.2rem; /* Diminui o tamanho da fonte do nome */
-        margin-bottom: 10px;
-    }
-
-    .menu-principal {
-        flex-direction: column; /* Transforma o menu em lista vertical */
-        gap: 12px;
-        width: 100%;
-        padding: 10px 0;
-        border-top: 1px solid #c1d18c55; /* Divisória sutil */
-    }
-
-    .habilidades-container {
-        grid-template-columns: 1fr; /* Força 1 coluna no celular para ocupar todo o espaço disponível */
-        padding: 0 10px; /* Adiciona um respiro nas laterais */
-    }
-
-    /* 3. RODAPÉ: Garante centralização e respiro */
-    footer {
-        padding: 20px;
-        font-size: 0.8rem;
-    }
-}
-
 /* Esconde o botão do menu no computador */
 .menu-toggle {
     display: none;
@@ -111,25 +77,6 @@ h1 {
     color: #c1d18c;
     font-size: 2rem;
     cursor: pointer;
-}
-
-@media screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Mostra o botão no celular */
-    }
-
-    .menu-principal {
-        display: none; /* Esconde a lista por padrão no celular */
-        flex-direction: column;
-        width: 100%;
-        background-color: #131f36;
-        padding: 20px 0;
-    }
-
-    /* Classe que o JavaScript vai "ligar" e "desligar" */
-    .menu-principal.ativo {
-        display: flex; /* Mostra o menu quando estiver ativo */
-    }
 }
 
 main {
@@ -426,4 +373,47 @@ input[type="checkbox"] {
 footer {
     margin-top: auto; 
     color: #c1d18c; 
+}
+
+/* Ajustes exclusivos para telas de celular (até 768px) */
+@media screen and (max-width: 768px) {
+
+    header {
+        padding: 15px 10px;
+        position: relative;
+    }
+
+    h1 {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .menu-toggle { /* Mostra o botão no celular */
+        display: block;
+    }
+
+    .menu-principal {
+        display: none; /* Esconde a lista por padrão no celular */
+        flex-direction: column; /* Transforma o menu em lista vertical */
+        gap: 12px;
+        width: 100%;
+        background-color: #131f36;
+        padding: 10px 0;
+        border-top: 1px solid #c1d18c55; /* Divisória sutil */
+    }
+
+    /* Classe que o JavaScript vai "ligar" e "desligar" */
+    .menu-principal.ativo {
+        display: flex; /* Mostra o menu quando estiver ativo */
+    }
+  
+    .habilidades-container {
+        grid-template-columns: 1fr; /* Força 1 coluna no celular para ocupar todo o espaço disponível */
+        padding: 0 10px; /* Adiciona um respiro nas laterais */
+    }
+
+    footer {
+        padding: 20px;
+        font-size: 0.8rem;
+    } 
 }
