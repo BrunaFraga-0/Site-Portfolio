@@ -1,5 +1,5 @@
 /* Importando uma fonte moderna do Google */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
 
 * { 
     margin: 0; 
@@ -91,12 +91,9 @@ h1 {
         border-top: 1px solid #c1d18c55; /* Divisória sutil */
     }
 
-    /* 2. TABELA: Cria rolagem lateral para não quebrar o layout */
-    .table {
-        display: block;
-        width: 100%;
-        overflow-x: auto; /* Permite deslizar a tabela com o dedo */
-        white-space: nowrap; /* Impede que o texto quebre linhas de forma feia */
+    .habilidades-container {
+        grid-template-columns: 1fr; /* Força 1 coluna no celular para ocupar todo o espaço disponível */
+        padding: 0 10px; /* Adiciona um respiro nas laterais */
     }
 
     /* 3. RODAPÉ: Garante centralização e respiro */
@@ -222,36 +219,72 @@ p {
     padding: 10px 10px;
 }
 
-.table {
+.habilidades-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px, 1fr)); /* Grid 2x2 */
+    gap: 20px;
     width: 100%;
-    max-width: 500px;
-    border-collapse: collapse;
-    margin: 0 auto 0 auto;
-    background-color: #131f36;
-    border-radius: 5px;
-    overflow: hidden; 
+    margin-top: 20px;
 }
 
-#table-head {
-    background-color: #131f36;
-    font-size: large;
+.card-habilidade {
+    background-color: transparent;
+    border: 1px solid #c1d18c;
+    border-radius: 8px;
+    padding: 25px;
 }
 
-#table-head th {
+.card-habilidade h3 {
     color: #c1d18c;
-}
-
-th, td {
-    padding: 10px 15px;
+    font-size: 1rem;
+    font-weight: 800; /* Agora vai funcionar pois importamos a fonte correta */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
     text-align: center;
-    color: #dee6f3;
-    border-bottom: 1px solid #c1d18c55;
 }
 
-#table-body {
-    background-color: #252c3874;
+/* Estilo para logos com legenda (Stack e Ferramentas) */
+.grid-icones {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    gap: 15px;
 }
 
+.item-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 2.2rem;
+    color: #131f36;
+}
+
+.item-logo span {
+    font-size: 0.70rem;
+    font-weight: bold;
+    margin-top: 8px;
+    text-transform: uppercase;
+}
+
+/* Estilo para lista de ícones (Fundamentos e Aprofundamento) */
+.lista-habilidades {
+    list-style: none;
+    color: #131f36;
+    font-size: 0.95rem;
+    line-height: 2.5; /* Espaçamento ideal para leitura */
+}
+
+.lista-habilidades li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.lista-habilidades i {
+    font-size: 1.2rem;
+    width: 25px;
+    text-align: center;
+}
 
 a { 
     color: #c1d18c; 
