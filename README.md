@@ -89,7 +89,7 @@ Você pode acompanhar a evolução do site através deste link:
 
 ---
 
-📅 *Atualizado em 23 de Fevereiro de 2026*
+📅 *Ultima atualização em 09 de Junho de 2026*
 
 ---
 
